@@ -11,6 +11,39 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type = "text/JavaScript" src= " index.js"></script>
+        <script>
+          function myFunction() {
+            var x = document.getElementById("item");
+            var y = document.getElementById("remove");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+              y.style.display = "none";
+            }
+          }
+          function myFunction1() {
+            var x = document.getElementById("item1");
+            var y = document.getElementById("remove1");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+              y.style.display = "none";
+            }
+          }
+          function myFunction2() {
+            var x = document.getElementById("item2");
+            var y = document.getElementById("remove2");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+              y.style.display = "none";
+            }
+          }
+        </script>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -18,44 +51,39 @@
         <hr>
         <div class = "players container">
             <h1 class = "Title"> You can see your Selected Players Here !</h1><br><br>
-            <div class = "cart row" >
-                <div class = "col-md-4">
+            <div class = "row" >
+                <div class = "col-md-4" id = "item">
                     <div class="card" style="width: 18rem;" >
                         <img src="https://images.unsplash.com/photo-1593766821405-f605e0f9535f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y3JpY2tldGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">Player Name</h5>
-                        <h6 class="card-title">Player Role</h6>
-                        <h6 class="card-title">Player Rating </h6>
+                        <h5 class="card-title title">Player Name</h5>
+                        <div id = "title"></div>
                         <p class="card-text">$99.9</p>
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-danger" id = "remove" onclick="myFunction()">
                             Remove Player
                         </button>
                         </div>
                     </div>
                 </div>
-                <div class = "col-md-4">
+                <div class = "col-md-4" id = "item1">
                     <div class="card" style="width: 18rem;" class = "col-md-5">
                         <img src="https://images.unsplash.com/photo-1593766821405-f605e0f9535f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y3JpY2tldGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title">Player Name</h5>
-                        <h6 class="card-title">Player Role</h6>
-                        <h6 class="card-title">Player Rating </h6>
                         <p class="card-text">$300.4</p>
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-danger" id = "remove1" onclick="myFunction1()" >
                             Remove Player
                         </button>
                         </div>
                     </div>
                 </div>
-                <div class = "col-md-4">
+                <div class = "col-md-4" id = "item2">
                     <div class="card" style="width: 18rem;" class = "col-md-5">
                         <img src="https://images.unsplash.com/photo-1593766821405-f605e0f9535f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y3JpY2tldGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title">Player Name</h5>
-                        <h6 class="card-title">Player Role</h6>
-                        <h6 class="card-title">Player Rating </h6>
                         <p class="card-text">$100.9</p>
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-danger" id = "remove2" onclick="myFunction2()">
                             Remove Player
                         </button>
                         </div>
@@ -67,32 +95,7 @@
         </div>
         
 
-
-
-<!-- Button trigger modal -->
-
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Think Twice :)</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Are You Sure You want to Remove Player ?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">No , I don't</button>
-          <button type="button" className = "remove" class="btn btn-primary">Yes , I do</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+ 
     </body>
 </html>
